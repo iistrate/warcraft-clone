@@ -14,6 +14,8 @@
 namespace GLOBALS {
     const int SCREEN_WIDTH = 1200;
     const int SCREEN_HEIGHT = 960;
+    const int LEVEL_WIDTH = 2400;
+    const int LEVEL_HEIGHT = 1800;
 }
 
 #endif
