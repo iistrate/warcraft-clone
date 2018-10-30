@@ -29,11 +29,18 @@ class Image {
     int sprite_x;
     int sprite_y;
     
-    
     const char *file_name;
     
     
 public:
+    Image(int x, int y, int w, int h, int layer, bool animated, bool flipped, bool is_static, int cf, int tf, int s_x, int s_y, const char* file_name):
+          x(x), y(y), width(w), height(h), layer(layer), is_animated(animated), is_flipped(flipped), is_static(is_static), current_frame(cf), total_frames(tf), sprite_x(s_x), sprite_y(s_y), file_name(file_name) {
+    //
+              //
+    }
+    ~Image() {
+        
+    }
     const char* get_file_name() {
         return file_name;
     }
