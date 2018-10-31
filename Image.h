@@ -9,6 +9,8 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
+#include "globals.h"
+
 class Image {
     //screen location
     int x;
@@ -33,14 +35,16 @@ class Image {
     
     
 public:
+    Image(int x, int y, struct image_type image_t):
+          x(x), y(y), width(image_t.w), height(image_t.h), layer(image_t.layer), is_animated(image_t.animated), is_flipped(image_t.flipped),
+          is_static(image_t.is_static), current_frame(image_t.cf), total_frames(image_t.tf), sprite_x(image_t.s_x), sprite_y(image_t.s_y), file_name(image_t.file_name)
+    {}
     Image(int x, int y, int w, int h, int layer, bool animated, bool flipped, bool is_static, int cf, int tf, int s_x, int s_y, const char* file_name):
-          x(x), y(y), width(w), height(h), layer(layer), is_animated(animated), is_flipped(flipped), is_static(is_static), current_frame(cf), total_frames(tf), sprite_x(s_x), sprite_y(s_y), file_name(file_name) {
-    //
-              //
-    }
-    ~Image() {
-        
-    }
+              x(x), y(y), width(w), height(h), layer(layer), is_animated(animated), is_flipped(flipped), is_static(is_static), current_frame(cf), total_frames(tf), sprite_x(s_x), sprite_y(s_y), file_name(file_name)
+    {}
+
+    ~Image() {}
+    
     const char* get_file_name() {
         return file_name;
     }
