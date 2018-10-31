@@ -45,11 +45,13 @@ class Texture_Manager {
     int screen_height;
     
 public:
-    Texture_Manager();
+    Texture_Manager(): ptexture(0), ptext_surface(0), pfont(0), camera_x(0), camera_y(0), level_height(GLOBALS::LEVEL_HEIGHT), level_width(GLOBALS::LEVEL_WIDTH), screen_width(GLOBALS::SCREEN_WIDTH), screen_height(GLOBALS::SCREEN_HEIGHT)
+    {
+        //
+    }
     ~Texture_Manager();
     
     void draw(SDL_Renderer* renderer, std::vector < Image* > images, SDL_RendererFlip flip = SDL_FLIP_NONE);
-    void draw_image(SDL_Renderer* renderer, Image* Image);
     
 };
 
