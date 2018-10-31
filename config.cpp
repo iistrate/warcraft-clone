@@ -6,4 +6,8 @@
 //  Copyright © 2018 Ioan Istrate. All rights reserved.
 //
 
-#include "config.hpp"
+#include "globals.h"
+
+struct image_type image_types[] = {
+    {TILE_WIDTH, TILE_HEIGHT, BACKGROUND_LAYER, 1, 1, 67, 199, "/Users/ioan1/warcraft/warcraft/assets/terrain.png", false, false, false}
+};
